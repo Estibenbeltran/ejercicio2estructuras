@@ -5,10 +5,11 @@
 	  <thead>
 	    <tr>
 	      
+	      <th scope="col">Codigo</th>
 	      <th scope="col">Nombre</th>
-	      <th scope="col">Apellido</th>
-	      <th scope="col">Ciudad</th>
-	      <th scope="col">Celular</th>
+	      <th scope="col">Valor</th>
+	      <th scope="col">Clase</th>
+	      <th scope="col">Tipo</th>
 	    </tr>
 	  </thead>
 	  <tbody>
@@ -17,6 +18,15 @@
 	    		$bandera=0;
 	    		foreach ($dato as $key => $value) {
 	    			switch ($buscador) {
+	    				case 'Codigo':
+	    					if($key=="Codigo"){
+		    					if($value==$datoBusqueda){
+		    						foreach ($dato as $key => $value) {
+						    			echo "<th>",$value,"</th>";
+						    		}
+		    					}
+		    				}
+	    					break;
 	    				case 'Nombre':
 	    					if($key=="Nombre"){
 		    					if($value==$datoBusqueda){
@@ -26,8 +36,8 @@
 		    					}
 		    				}
 	    					break;
-	    				case 'Apellido':
-	    					if($key=="Apellido"){
+	    				case 'valor':
+	    					if($key=="valor"){
 		    					if($value==$datoBusqueda){
 		    						foreach ($dato as $key => $value) {
 						    			echo "<th>",$value,"</th>";
@@ -35,8 +45,8 @@
 		    					}
 		    				}
 	    					break;
-	    				case 'Ciudad':
-	    					if($key=="Ciudad"){
+	    				case 'clase':
+	    					if($key=="clase"){
 		    					if($value==$datoBusqueda){
 		    						foreach ($dato as $key => $value) {
 						    			echo "<th>",$value,"</th>";
@@ -44,8 +54,8 @@
 		    					}
 		    				}
 	    					break;
-	    				case 'Celular':
-	    					if($key=="Celular"){
+	    				case 'clase':
+	    					if($key=="clase"){
 		    					if($value==$datoBusqueda){
 		    						foreach ($dato as $key => $value) {
 						    			echo "<th>",$value,"</th>";
