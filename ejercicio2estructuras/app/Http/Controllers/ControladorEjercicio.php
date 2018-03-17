@@ -1,21 +1,13 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-
 class ControladorEjercicio extends Controller
 {
-    //
     public function MatrizEjercicio(Request $request){
-
 	    	$datoBusqueda = $request->input('datoBusqueda');
 	    	$buscador = $request->input('buscador');
-
 	    	$bandera=0;
-	        
 	    	$codigos=[];
-
 	    	$codigos[]=["Codigo"=>30101500, "Nombre"=>"Ángulos","valor"=>15000, "clase"=>"A", "tipo"=>3];
 			$codigos[]=["Codigo"=>30101501, "Nombre"=>"Ángulos de aleación ferrosa","valor"=>15000, "clase"=>"A", "tipo"=>3];
 			$codigos[]=["Codigo"=>30101502, "Nombre"=>"Ángulos de aleación no ferrosa","valor"=>15000, "clase"=>"A", "tipo"=>3];
@@ -558,17 +550,11 @@ class ControladorEjercicio extends Controller
 			$codigos[]=["Codigo"=>30172111, "Nombre"=>"Operador completo de puerta de garaje","valor"=>5000, "clase"=>"C", "tipo"=>1];
 			$codigos[]=["Codigo"=>30172112, "Nombre"=>"Componente de operador de puerta de garaje"];
 			$codigos[]=["Codigo"=>30172113, "Nombre"=>"Accesorio de operador de puerta de garaje"];
-		      
-
 	    	$info=[
 	    		'datos'=>$codigos,
 	    		'buscador'=>$buscador,
 	    		'datoBusqueda'=>$datoBusqueda
 	    	];
-	    	
-
-	   	
 	    return view('contenido2',$info);
 	}
-
 }

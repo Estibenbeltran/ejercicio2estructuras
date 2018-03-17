@@ -1,10 +1,8 @@
 @extends('master')
-
 @section('contenido')
 	<table class="table table-dark">
 	  <thead>
 	    <tr>
-	      
 	      <th scope="col">Codigo</th>
 	      <th scope="col">Nombre</th>
 	      <th scope="col">Valor</th>
@@ -17,7 +15,7 @@
    			echo "<tr>";
 	    		$bandera=0;
 	    		foreach ($dato as $key => $value) {
-	    			switch ($buscador) {
+	    			switch ($buscador){
 	    				case 'Codigo':
 	    					if($key=="Codigo"){
 		    					if($value==$datoBusqueda){
@@ -54,8 +52,8 @@
 		    					}
 		    				}
 	    					break;
-	    				case 'clase':
-	    					if($key=="clase"){
+	    				case 'tipo':
+	    					if($key=="tipo"){
 		    					if($value==$datoBusqueda){
 		    						foreach ($dato as $key => $value) {
 						    			echo "<th>",$value,"</th>";
@@ -67,12 +65,10 @@
 	    					echo "No existe.";
 	    					break;
 	    			}
-	    			
 	    		}
 		    	echo "</tr>";
 	    }
 	    ?>
 	  </tbody>
 	</table>
-
 @stop
