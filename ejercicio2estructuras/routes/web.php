@@ -19,4 +19,8 @@ Route::get('/', function () {
 Route::get('/contenido2', function () {
     return view('contenido2');
 });
+Route::get('/compra', function () {
+    return view('compra');
+});
 Route::post('Informacion','ControladorEjercicio@MatrizEjercicio');
+Route::post('Comprar','Comprar@Formulario');
